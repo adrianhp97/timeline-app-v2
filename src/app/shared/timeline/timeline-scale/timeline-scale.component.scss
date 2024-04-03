@@ -1,0 +1,47 @@
+:host {
+  z-index: 9;
+  position: sticky;
+  top: 0;
+  background: #FFFFFF;
+}
+
+.timeline-scale-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  border-bottom: 1px solid rgb(233, 233, 231);
+  background: #FFFFFF;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .group-label {
+    padding: 8px 12px;
+    height: 20px;
+
+    & > span {
+      position: sticky;
+      left: 12px;
+      height: 20px;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .item-container {
+    display: flex;
+
+    .item {
+      width: 24px;
+      padding: 8px 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

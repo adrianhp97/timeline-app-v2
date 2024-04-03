@@ -1,0 +1,10 @@
+<div class="timeline-scale-container" (mouseenter)="mouseenter.emit($event)" (scroll)="scroll.emit($event)" #container>
+  <div *ngFor="let group of timelineScales;" class="group-container">
+    <div class="group-label">
+      <span>{{ group.label }}</span>
+    </div>
+    <div class="item-container">
+      <div *ngFor="let item of group.items;" class="item" [attr.data-date]="item.date">{{ item.day }}</div>
+    </div>
+  </div>
+</div>

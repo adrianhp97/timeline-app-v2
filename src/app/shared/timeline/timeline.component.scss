@@ -1,0 +1,14 @@
+.timeline-container {
+  padding: 12px;
+  display: flex;
+  box-shadow: rgba(15, 15, 15, 0.03) 0px 0px 8px 0px;
+
+  .timeline-left {
+    width: 160px;
+    flex: 0 0 160px;
+  }
+
+  .timeline-right {
+    width: calc(100% - 160px);
+  }
+}

@@ -1,0 +1,35 @@
+.timeline-panel-container {
+  padding-top: 36px;
+  border-right: 1px solid rgb(233, 233, 231);
+
+  .header-item {
+    padding: 8px 12px;
+    border-bottom: 1px solid rgb(233, 233, 231);
+    font-weight: bold;
+  }
+
+  .item {
+    padding: 8px 12px;
+    border-bottom: 1px solid rgb(233, 233, 231);
+    box-sizing: border-box;
+    height: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &.expanded {
+      overflow: unset;
+      white-space: unset;
+      height: fit-content;
+    }
+
+    .meta-container {
+      margin-bottom: 4px;
+
+      .meta-key {
+        font-weight: bold;
+      }
+    }
+  }
+}

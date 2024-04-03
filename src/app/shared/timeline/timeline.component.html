@@ -1,0 +1,9 @@
+<div class="timeline-container">
+  <div class="timeline-left">
+    <app-timeline-panel [items]="itemsFormatted.concat(emptyItems)"></app-timeline-panel>
+  </div>
+  <div class="timeline-right">
+    <app-timeline-scale #scale (mouseenter)="updateCurrentElement('scale')" (scroll)="updateVerticalScroll($event)"></app-timeline-scale>
+    <app-timeline-board #board [items]="itemsFormatted.concat(emptyItems)" (mouseenter)="updateCurrentElement('board')" (scroll)="updateVerticalScroll($event)"></app-timeline-board>
+  </div>
+</div>

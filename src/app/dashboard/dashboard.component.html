@@ -1,0 +1,26 @@
+<div class="container">
+  <app-timeline [items]="items"></app-timeline>
+
+  <div>
+    <div class="filter-container">
+      <mat-form-field>
+        <mat-label>Priority</mat-label>
+        <mat-select [formControl]="priorities" multiple>
+          @for (priority of priorityList; track priority) {
+            <mat-option [value]="priority">{{ priority }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Stages</mat-label>
+        <mat-select [formControl]="stages" multiple>
+          @for (stage of stageList; track stage) {
+            <mat-option [value]="stage">{{ stage }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <app-chart [data]="chartData" [dataLabel]="'Team Member'"></app-chart>
+  </div>
+</div>

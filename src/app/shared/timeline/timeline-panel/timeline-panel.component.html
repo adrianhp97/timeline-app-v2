@@ -1,0 +1,17 @@
+<div class="timeline-panel-container">
+  <div class="header">
+    <div class="header-item">Name</div>
+  </div>
+  <div class="body">
+    <div *ngFor="let item of items;" [ngClass]="{ 'item': true, expanded: !!item?.isExpanded?.() }" (click)="toggleElement($event, item)">
+      <ng-template *ngIf="item?.isExpanded?.();then long_content else short_content"></ng-template>
+      <ng-template #short_content>{{ item.name }}</ng-template>
+      <ng-template #long_content>
+        <div *ngFor="let meta of item.meta | keyvalue;" class="meta-container">
+          <div class="meta-key">{{ meta.key }}:</div>
+          <div class="meta-value">{{ meta.value || '-' }}</div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

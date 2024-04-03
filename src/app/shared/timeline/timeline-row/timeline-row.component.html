@@ -1,0 +1,6 @@
+<div class="timeline-row" #container>
+  <div *ngIf="item?.name">
+    <app-timeline-item [item]="item!" [position]="itemPosition"></app-timeline-item>
+  </div>
+  <div *ngFor="let column of columns;" class="timeline-column" [attr.data-date]="column.text" [attr.data-day-of-week]="column.day_of_week" [style.height.px]="item?.getHeight?.()"></div>
+</div>

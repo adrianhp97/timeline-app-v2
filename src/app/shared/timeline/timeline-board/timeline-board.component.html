@@ -1,0 +1,3 @@
+<div class="board-container" (mouseenter)="mouseenter.emit($event)" (scroll)="scroll.emit($event)" #container>
+  <app-timeline-row *ngFor="let item of items;" class="item" [item]="item"></app-timeline-row>
+</div>

@@ -1,0 +1,20 @@
+.timeline-row {
+  display: flex;
+  position: relative;
+
+  .timeline-column {
+    flex: 0 0 24px;
+    width: 24px;
+    min-height: 20px;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(236, 236, 236, 0.28);
+
+    &[data-day-of-week="6"],
+    &[data-day-of-week="0"] {
+      background-color: rgba(127, 127, 127, 0.28);
+    }
+  }
+}
